@@ -1,0 +1,25 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "settings": "Settings"
+  },
+  "user": {
+    "profile": "Profile",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register"
+  },
+  "messages": {
+    "welcome": "Welcome to our application!",
+    "loading": "Loading, please wait...",
+    "error": "An error has occurred."
+  },
+  "buttons": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit"
+  }
+}

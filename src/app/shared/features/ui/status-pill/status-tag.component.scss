@@ -1,0 +1,20 @@
+.status-tag {
+  background: grey;
+  color: white;
+  padding: 4px 8px;
+  width: fit-content;
+  border-radius: 4px;
+
+  span {
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+
+  &--completed {
+    background: #28a745;
+  }
+
+  &--overdue {
+    background: #dc3545;
+  }
+}

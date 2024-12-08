@@ -1,0 +1,30 @@
+@import '../../../../../assets/scss/variables.scss';
+
+.tender-step--wrapper {
+  min-width: 100% !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+.tender-step {
+  h2 {
+    margin-bottom: 4px !important;
+    font-weight: 600;
+  }
+
+  p {
+    font-family: $font-family-accent;
+    //font-weight: 500;
+  }
+
+  &.mdc-card {
+    box-shadow: none;
+    padding: 20px;
+    margin-bottom: 6px;
+  }
+}
+//
+//:host {
+//  max-width: 750px;
+//  width: 100%;
+//}

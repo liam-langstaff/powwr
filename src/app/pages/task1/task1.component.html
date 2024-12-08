@@ -1,0 +1,42 @@
+<!-- ============================================================== -->
+<!-- Simple four boxes Row -->
+<!-- ============================================================== -->
+  <mat-card class="cardWithShadow container">
+    <mat-card-content>
+      <mat-card-title>Task 1</mat-card-title>
+      <mat-card-subtitle class="mat-body-1"
+      >Please follow the instructions for the Task 1 on the document sent to you
+        to implement this task.</mat-card-subtitle
+      >
+      <h2>Task</h2>
+      <p>Debug and solve issue regarding the sidebar nav not visible on open toggle. Additionally fix the logo sizing on open and closed state.</p>
+      <h2>Why?</h2>
+      <p>
+        I believe there are a few possible solutions to this. On observation it appears that the
+        the main constraints is coming from the flexbox classes specifically the '.d-flex' and
+        accompying flexbox classes creating constraints resulting in the width being reduced to 0.
+      </p>
+
+      <h3>Possible solutions:</h3>
+      <ul>
+        <li>Remove the flex classes entirely. Removing the 'd.flex' and additional flex classes from the sidebar.component.html wrapping div would result in the image expanding to its natural dimensions, outside containers will result in the shrinkage when closing.</li>
+        <li>Adding 'flex-grow: 1' to the :host of branding.component.ts. Adding this flex property will result in the parent growing to its maximum flexbox container width, taking any available space it can. As there is only 1 column, it will fill the full width.</li>
+      </ul>
+      <h3>Additional info:</h3>
+      <p><code>.branding &lbrace;
+        width: $sidenav-mini - 15px;
+        overflow: hidden;
+        &rbrace;</code></p>
+      <p>It also appears that when the sidenav has been closed, the logo is far too small. On observation, it seems that the width is set to a mini variable in addition to reducing the size by 15px which is not needed in this case. Removing the  - 15px makes the logo appear relative to its smaller container.</p>
+      <code>
+        .branding &lbrace;
+        padding: 20px;
+        &rbrace;
+      </code>
+      <p>
+        Another area which creates reduced logo width is the excessive padding which is applied on both
+        mobile and desktop. Where possible the padding should be reduced to ensure legibility of the
+        logo and prevent further reduction of the logo size. I've created an input to toggle a class
+        when the sidebar is open.</p>
+    </mat-card-content>
+  </mat-card>

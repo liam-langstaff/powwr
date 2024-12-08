@@ -1,0 +1,24 @@
+@import '../../../../../assets/scss/variables.scss';
+
+button.mdc-button.pwr-button--primary {
+  border-radius: 8px;
+  background-color: $btn-primary-color;
+  color: $white;
+  transition: background-color 0.1s ease-in;
+  padding: 20px 18px;
+
+  .btn-label {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &:hover {
+    background-color: $btn-primary-hover;
+  }
+}
+
+
+button.mat-mdc-menu-item {
+  padding: 10px 60px;
+}
+

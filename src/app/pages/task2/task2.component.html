@@ -1,0 +1,29 @@
+<!-- ============================================================== -->
+<!-- Simple four boxes Row -->
+<!-- ============================================================== -->
+<mat-card class="cardWithShadow container">
+  <mat-card-content>
+    <mat-card-title>Task 2</mat-card-title>
+    <mat-card-subtitle class="mat-body-1"
+      >Please follow the instructions for the Task 2 on the document sent to you
+      to implement this task.</mat-card-subtitle
+    >
+    <h2>Task</h2>
+    <p>Fix the menu items text display within the nav-item.component</p>
+
+    <h2>Why?</h2>
+    <p>When looking inside the nav-item.component.html file, it was evident that the translate pipe was
+      failing due to a missing en.json file within the i18n folder, thus will fail to render the text needed for the nav item.</p>
+    <h3>Possible solutions:</h3>
+    <ul>
+      <li>Simply removing the pipe will instantly solve the issue regarding the rendering of the displayText (not ideal if your looking to actually translate)</li>
+      <li>Adding an en.json translation file inside the already existing i18n folder. It was apparent that the console was flagging a missing en.json file. Placing a valid json file here will allow the text to render correctly.</li>
+    </ul>
+    <h3>Additional info:</h3>
+    <ul>
+      <li><p>When looking around the app, I noticed multiple console errors attempting to use images that did not exist. As the app uses material, I thought it would be best to use material icons instead. I've modified the 'apps' object to feed in the icon name instead of an image path and replaced the img tag with a mat-icon</p></li>
+      <li>Another console error I had spotted was regarding a material drawer issue. 'ERROR Error: A drawer was already declared for 'position="start"''. This is due to rendering two mat-sidebar components within the full.component.
+      the vertical sidebar is shown when the '!options.horizontal' value is true, however the horizontal sidebar is rendered when 'resView' is true, which in this case renders as true and thus, creating this issue. I've added an additional check to ensure 'options.horizontal' is true before attempting to render this.</li>
+    </ul>
+  </mat-card-content>
+</mat-card>

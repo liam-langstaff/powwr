@@ -1,0 +1,21 @@
+<button [disabled]="isLoading" mat-button [matMenuTriggerFor]="menu"
+        class="pwr-button--primary flex items-center gap-4 flex-row-reverse">
+  <div class="flex items-center gap-6">
+    <span class="btn-label">New tender</span>
+    @if (isLoading) {
+      <mat-progress-spinner
+        diameter="16"
+        mode="indeterminate"
+      ></mat-progress-spinner>
+    } @else {
+      <mat-icon style="margin-right: 0">keyboard_arrow_down</mat-icon>
+    }
+  </div>
+
+</button>
+
+<mat-menu [xPosition]="'before'" #menu="matMenu">
+  @for (item of menuList; track item.id) {
+    <button (click)="item.callback ? item.callback() : null" mat-menu-item>{{ item.label }}</button>
+  }
+</mat-menu>

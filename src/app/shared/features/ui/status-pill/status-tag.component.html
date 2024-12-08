@@ -1,0 +1,5 @@
+<div class="status-tag flex items-center gap-1"
+     [ngClass]="{ 'status-tag--pending': status === 'pending', 'status-tag--completed': status === 'completed', 'status-tag--overdue': status === 'overdue'}">
+  <mat-icon>info_outline</mat-icon>
+  <span>{{ status }}</span>
+</div>

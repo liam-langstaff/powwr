@@ -1,0 +1,154 @@
+@mixin generate-overall-padding-classes($increments) {
+  @for $i from 0 through $increments {
+    .p-#{$i} {
+      padding: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-top-padding-classes($increments) {
+  @for $i from 0 through $increments {
+    .pt-#{$i} {
+      padding-top: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-right-padding-classes($increments) {
+  @for $i from 0 through $increments {
+    .pr-#{$i} {
+      padding-right: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-bottom-padding-classes($increments) {
+  @for $i from 0 through $increments {
+    .pb-#{$i} {
+      padding-bottom: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-left-padding-classes($increments) {
+  @for $i from 0 through $increments {
+    .pl-#{$i} {
+      padding-left: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-horizontal-padding-classes($increments) {
+  @for $i from 0 through $increments {
+    .px-#{$i} {
+      padding-left: #{$i * 4}px;
+      padding-right: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-vertical-padding-classes($increments) {
+  @for $i from 0 through $increments {
+    .py-#{$i} {
+      padding-top: #{$i * 4}px;
+      padding-bottom: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-gap-classes($increments) {
+  @for $i from 0 through $increments {
+    .gap-#{$i} {
+      gap: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-overall-margin-classes($increments) {
+  @for $i from 0 through $increments {
+    .m-#{$i} {
+      margin: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-horizontal-margin-classes($increments) {
+  @for $i from 0 through $increments {
+    .mx-#{$i} {
+      margin-left: #{$i * 4}px;
+      margin-right: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-vertical-margin-classes($increments) {
+  @for $i from 0 through $increments {
+    .my-#{$i} {
+      margin-top: #{$i * 4}px;
+      margin-bottom: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-margin-top-classes($increments) {
+  @for $i from 0 through $increments {
+    .mt-#{$i} {
+      margin-top: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-margin-right-classes($increments) {
+  @for $i from 0 through $increments {
+    .mr-#{$i} {
+      margin-right: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-margin-bottom-classes($increments) {
+  @for $i from 0 through $increments {
+    .mb-#{$i} {
+      margin-bottom: #{$i * 4}px;
+    }
+  }
+}
+
+@mixin generate-margin-left-classes($increments) {
+  @for $i from 0 through $increments {
+    .ml-#{$i} {
+      margin-left: #{$i * 4}px;
+    }
+  }
+}
+
+$base-font-size: 1rem;
+$scale-factor: 0.5;
+$display-levels: 6;
+
+@mixin display-classes($num) {
+  @for $i from 1 through $num {
+    .display-#{$i} {
+      font-size: $base-font-size + ($scale-factor * ($num - $i + 1));
+    }
+  }
+}
+
+  @include display-classes($display-levels);
+  @include generate-overall-padding-classes(10);
+  @include generate-horizontal-padding-classes(10);
+  @include generate-vertical-padding-classes(10);
+  @include generate-top-padding-classes(10);
+  @include generate-right-padding-classes(10);
+  @include generate-bottom-padding-classes(10);
+  @include generate-left-padding-classes(10);
+  @include generate-gap-classes(10);
+  @include generate-overall-margin-classes(10);
+  @include generate-horizontal-margin-classes(10);
+  @include generate-vertical-margin-classes(10);
+  @include generate-margin-top-classes(10);
+  @include generate-margin-right-classes(10);
+  @include generate-margin-bottom-classes(10);
+  @include generate-margin-left-classes(10);
+
+

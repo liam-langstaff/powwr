@@ -1,0 +1,80 @@
+<!-- ============================================================== -->
+<!-- Simple four boxes Row -->
+<!-- ============================================================== -->
+<mat-card class="cardWithShadow container">
+  <mat-card-content>
+    <h1>Tasks 3 & 4: Reflective Notes</h1>
+
+    <h2>Key Observations</h2>
+    <p>
+      Working solely from a static screenshot introduces significant challenges, particularly a lack of context and consistency.
+      Without access to a design tool or additional specifications, assumptions had to be made regarding essential aspects such
+      as font sizes, colors, spacing, and overall layout. Moving forward, having at least a design tool or detailed guidelines
+      is critical to mitigate these issues. This ensures alignment and helps avoid inconsistencies or misinterpretations.
+    </p>
+    <p>
+      Another potential issue or question is the material focus / ripple. Many of these native material components especially buttons
+      have their own ripple. To make this work and look how they want, they all need appropriate padding. This was the case for the
+      pagination back and forward buttons. I decided to keep this effect in however may seem slightly off from the design. Without
+      discussing with the designer it is unclear if this should be intentional or not.
+    </p>
+    <p>
+      Additionally, well-defined requirements for any new feature are essential. These not only promote consistency but also
+      prevent scope creep or over-engineering, which can arise from vague or incomplete specifications.
+    </p>
+
+    <h2>Design Decisions</h2>
+    <p>There are a few design elements I would highlight for review had I been involved in the design phase. For instance:</p>
+    <ul>
+      <li>
+        <strong>Dropdown Menu Padding:</strong> The provided screenshot suggests an imbalance between the left and right
+        padding of the dropdown menu items, possibly due to the combination of left alignment and a <code>flex: 1</code>
+        property filling available space. This imbalance could create visual inconsistency.
+      </li>
+      <li>
+        <strong>Search Bar Absence:</strong> If the interface involves hundreds of deals or entries, the lack of a search
+        bar could create friction for users, forcing them to spend unnecessary time navigating the interface to find
+        specific details.
+      </li>
+    </ul>
+
+    <h2>Additional Implementation Details</h2>
+    <ul>
+      <li>
+        <strong>Tender Steps:</strong> The tender steps use the <code>mat-card</code> component in combination with button
+        elements to ensure default behaviors such as pointer cursor changes and keyboard accessibility (e.g., tab navigation).
+      </li>
+      <li>
+        <strong>UUID for Mocking:</strong> When navigating to a new tender, I generated a random UUID and stored it in
+        local storage. This simulates a backend flow by enabling users to revisit the same URL and retrieve the mock data.
+      </li>
+      <li>
+        <strong>Consistency in Titles:</strong> Minor inconsistencies in the tender step titles were addressed.
+        Specifically, the usage of "&" and "and" was standardized to "&" throughout.
+      </li>
+      <li>
+        <strong>Component States:</strong>
+        <ul>
+          <li>
+            <strong>Status Tags:</strong> In the design, all status tags were marked as "Pending." I considered it vital
+            to represent other potential states to ensure spacing and alignment remained consistent across the container
+            or feature.
+          </li>
+          <li>
+            <strong>Table Cell Overflow:</strong> Designs often show ideal scenarios, such as short text in table cells.
+            In practice, longer text may overflow into adjacent cells. To address this, an ellipsis for
+            text that exceeds the available space should be included.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Skeleton Loader:</strong> Instead of a spinner replacing the entire table, I opted for a skeleton loader
+        to enhance the user experience. This design decision provides a clearer visual cue that data is being retrieved
+        while maintaining the structure of the interface.
+      </li>
+      <li>
+        <strong>API Mocks:</strong> In reflection, to simulate a response further, I could of container the steps content within the localStorage object and retrieve it from there. This would allow for a more realistic experience.
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>

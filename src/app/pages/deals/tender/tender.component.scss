@@ -1,0 +1,16 @@
+.step-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  min-width: 100%;
+  justify-content: center;
+
+  app-tender-step {
+    max-width: 750px;
+    width: 100%;
+  }
+}
+
+h1 {
+  line-height: 32px;
+}

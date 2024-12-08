@@ -1,0 +1,13 @@
+<section>
+  <header class="p-6">
+    <ui-breadcrumb [breadcrumbs]="breadcrumbs"></ui-breadcrumb>
+    <h1 class="display-5">{{ pageTitle() }}: {{ tenderType() }}</h1>
+  </header>
+  <div class="container">
+    @for (step of steps; track step.description; let last = $last) {
+      <div class="step-wrapper">
+        <app-tender-step class="mb-3" [step]="step"></app-tender-step>
+      </div>
+    }
+  </div>
+</section>

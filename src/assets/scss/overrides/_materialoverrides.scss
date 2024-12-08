@@ -1,0 +1,136 @@
+
+.light-theme .blue_theme,
+.light-theme .purple_theme,
+.light-theme .orange_theme,
+.light-theme .green_theme,
+.light-theme .aqua_theme,
+.light-theme .cyan_theme,
+.dark-theme {
+  @import "./buttons";
+  @import "./drawer";
+  @import "./form";
+  @import "./checkbox";
+  @import "./radio";
+
+  .topbar {
+    background-color: $toolbar;
+  }
+  .mat-mdc-paginator-container {
+    font-family: $font-family-accent !important;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 16px;
+
+    .mat-mdc-icon-button svg, .mat-mdc-icon-button img {
+      min-width: 32px;
+      min-height: 32px;
+    }
+  }
+
+  .mat-sort-header-container:not(.mat-sort-header-sorted) .mat-sort-header-arrow {
+    opacity: 0.54 !important;
+    transform: translateY(0px) !important;
+  }
+
+  .mat-mdc-paginator-icon {
+    fill: $btn-primary-color;
+  }
+
+  .mat-mdc-paginator-range-label {
+    margin-right: 0;
+  }
+
+
+
+  .mat-mdc-paginator-range-actions button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mat-mdc-paginator-range-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mat-mdc-paginator-page-size .mat-mdc-text-field-wrapper {
+    padding-left:0 ;
+  }
+
+  .mat-mdc-select-arrow {
+    color: $font-dark;
+  }
+
+  .mat-mdc-select-min-line {
+    font-size: 14px;
+  }
+
+
+    .mat-mdc-select-value {
+      width: 22px;
+      font-weight: bold;
+    }
+
+    .mat-mdc-cell, thead > tr > th.mat-mdc-header-cell{
+      font-family: $font-family-accent !important;
+    }
+
+    thead > tr > th.mat-mdc-header-cell {
+      border-bottom: 3px solid #b6b6b6;
+    }
+
+    mat-paginator .mat-mdc-paginator-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    thead > tr > th.mat-mdc-header-cell {
+      font-weight: 500;
+    }
+
+    tbody > tr > td.mat-mdc-cell {
+      border-bottom-color: #dfdfdf;
+    }
+
+}
+
+.light-theme,
+.dark-theme {
+  @import "./card";
+  @import "./typography";
+}
+
+@import "./borderColor";
+@import "./table";
+
+@import "./list";
+
+.cdk-overlay-container .mat-mdc-menu-panel {
+  border-radius: 12px;
+  border: 1px solid #D9DFE3;
+
+
+  .mat-mdc-menu-item-text {
+    font-weight: 500 !important;
+  }
+}
+
+.mat-elevation-z8, .mat-mdc-elevation-specific.mat-elevation-z8 {
+  box-shadow: none;
+}
+
+.mat-mdc-paginator {
+  background: none !important;
+
+  .mdc-text-field--outlined {
+    border: none !important;
+  }
+
+  .mdc-notched-outline {
+    display: none !important;
+  }
+}
+
+
+
